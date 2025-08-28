@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Área do Professor - Upload de Imagens</title>
+  <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+
+<header>
+  <h1>Área do Professor</h1>
+  <h2>Upload de Imagens para Galeria de Robótica</h2>
+  <nav><a href="index.html" class="btn-voltar">Voltar para Galeria</a></nav>
+</header>
+
+<main>
+  <section class="upload-section">
+    <h3>Enviar Nova Imagem</h3>
+    <form id="upload-form">
+      <div class="form-group">
+        <label for="album">Selecione o Álbum:</label>
+        <select id="album" required>
+          <option value="">Selecione um álbum</option>
+          <option value="album1">Feira de Robótica</option>
+          <option value="album2">Oficina</option>
+          <option value="album3">Competição</option>
+          <option value="public">Geral</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="image-upload">Selecione a Imagem:</label>
+        <input type="file" id="image-upload" accept="image/*" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="image-name">Nome da Imagem (opcional):</label>
+        <input type="text" id="image-name" placeholder="Deixe em branco para usar o nome original">
+      </div>
+      
+      <button type="submit" id="upload-button">Enviar Imagem</button>
+    </form>
+    
+    <div id="upload-status"></div>
+  </section>
+  
+  <section class="uploaded-images">
+    <h3>Imagens Enviadas Recentemente</h3>
+    <div id="uploaded-images-container" class="images-container">
+      <!-- As imagens enviadas serão exibidas aqui -->
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Colégio Cívico Militar Estadual Antônio José Reis</p>
+  <p>Área restrita aos professores</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="upload.js"></script>
+</body>
+</html>

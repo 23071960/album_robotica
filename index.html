@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividades de Robótica - CCM Antônio José Reis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <h1>Atividades de Robótica</h1>
+  <h2>Colégio Cívico Militar Estadual Antônio José Reis</h2>
+  <nav><a href="#" class="btn-upload" onclick="openLoginModal(); return false;">Área do Professor</a></nav>
+</header>
+
+<main>
+  <section class="albums">
+    <h3>Álbuns</h3>
+    
+    <div class="description">
+      <p>Álbuns de imagens das atividades dos alunos de robótica do Fundamental I e Fundamental II.</p>
+    </div>
+    
+    <div id="album-list" class="album-list">
+      <!-- Os álbuns serão carregados dinamicamente pelo JavaScript -->
+    </div>
+  </section>
+</main>
+
+<!-- Modal para Login -->
+<div id="login-modal" class="modal">
+  <div class="modal-content login-content">
+    <span class="close" onclick="closeLoginModal()">&times;</span>
+    <h2>Acesso Restrito</h2>
+    <p>Digite a senha para acessar a área do professor:</p>
+    <form id="login-form">
+      <div class="form-group">
+        <input type="password" id="password" placeholder="Senha" required>
+      </div>
+      <button type="submit" class="btn-login">Acessar</button>
+    </form>
+    <p id="login-message" class="login-message"></p>
+  </div>
+</div>
+
+<!-- Modal para Álbuns -->
+<div id="album-modal" class="modal">
+  <span class="close" onclick="closeAlbumModal()">&times;</span>
+  <div id="album-modal-content" class="modal-content"></div>
+</div>
+
+<footer>
+  <p>Endereço: Rua Exemplo, 123 - Cidade/UF</p>
+  <p>Telefone: (00) 1234-5678 | WhatsApp: (00) 91234-5678</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="album.js"></script>
+</body>
+</html>
